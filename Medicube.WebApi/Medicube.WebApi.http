@@ -1,6 +1,0 @@
-@Medicube.WebApi_HostAddress = http://localhost:5216
-
-GET {{Medicube.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

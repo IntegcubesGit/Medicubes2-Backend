@@ -1,13 +1,13 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Medicube.Domain\Domain.csproj", "{989C130F-AF04-43BD-BC52-88241ADF2930}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "MediCubes.Domain\Domain.csproj", "{989C130F-AF04-43BD-BC52-88241ADF2930}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Medicube.Application\Application.csproj", "{2DD22FCF-EB4F-4C2E-A43F-26A9F80DD789}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "MediCubes.Application\Application.csproj", "{2DD22FCF-EB4F-4C2E-A43F-26A9F80DD789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Medicube.Infrastructure\Infrastructure.csproj", "{D8B186F8-A125-4FAE-9F4C-758B6F3406E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "MediCubes.Infrastructure\Infrastructure.csproj", "{D8B186F8-A125-4FAE-9F4C-758B6F3406E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "Medicube.WebApi\WebApi.csproj", "{5F99B71D-3176-47B0-8FDE-152B06300422}"
 EndProject

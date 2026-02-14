@@ -1,4 +1,4 @@
-﻿using Application.Common.Interfaces.JWT;
+using Application.Common.Interfaces;
 using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -11,29 +11,25 @@ namespace WebApi.ActionFilters
     {
         private readonly string _menuName;
         private readonly string _accessType;
-        private readonly IJWTService _jWTService;
+        private readonly ICurrentUser _currentUser;
 
-        public MenuAccessFilter(string menuName, string accessType,IJWTService jWTService)
+        public MenuAccessFilter(string menuName, string accessType, ICurrentUser currentUser)
         {
             _menuName = menuName;
             _accessType = accessType;
-            _jWTService = jWTService;
+            _currentUser = currentUser;
         }
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            // Get the DbContext from DI
             var appDbContext = context.HttpContext.RequestServices.GetService(typeof(AppDbContext)) as AppDbContext;
             if (appDbContext == null)
             {
-                context.Result = new StatusCodeResult(500); // Internal Server Error
+                context.Result = new StatusCodeResult(500);
                 return;
             }
 
-            // Get user ID from claims
-            //use the jwtclaims here
-
-            var tempUser = _jWTService.DecodeToken();
+            var tempUser = _currentUser.GetCurrentUser();
 
             // Build the query using query syntax
             var query = await (from uar in appDbContext.UserRoles

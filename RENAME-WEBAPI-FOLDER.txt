@@ -1,0 +1,4 @@
+To complete the Medicube → MediCubes rename:
+1. Close Visual Studio and stop any running WebApi process.
+2. Rename folder: Medicube.WebApi → MediCubes.WebApi
+3. You can delete this file afterward.

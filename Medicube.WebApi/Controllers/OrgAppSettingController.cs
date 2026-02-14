@@ -1,4 +1,4 @@
-﻿using Application.Common.Interfaces;
+using Application.Common.Interfaces;
 using Domain.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,12 +31,6 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetOrgAppSetting()
         {
             var res = await _settingService.GetOrgSetting();
-            return Ok(res);
-        }
-        [HttpGet("GetInvoiceSetting")]
-        public async Task<IActionResult> GetInvoiceSetting()
-        {
-            var res = await _settingService.GetInvoiceSetting();
             return Ok(res);
         }
     }

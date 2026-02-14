@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -42,7 +42,7 @@ namespace WebApi.Extensions
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "Medicube.Fusion",
+                    Title = "MediCubes 2.0",
                     Version = "v1"
                 });
 
